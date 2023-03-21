@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="/dist/output.css" rel="stylesheet" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined"
+    />
+  </head>
+  <body>
+    <nav class="bg-white">
+      <div class="px-2 sm:px-6 lg:px-8">
+        <div class="relative flex h-16 items-center justify-between">
+          <div class="absolute inset-y-0 left-0 flex items-center sm:hidden">
+            <!--
+                Icon when menu is open.
+    
+                Menu open: "block", Menu closed: "hidden"
+              -->
+            <svg
+              class="hidden h-6 w-6"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke-width="1.5"
+              stroke="currentColor"
+              aria-hidden="true"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M6 18L18 6M6 6l12 12"
+              />
+            </svg>
+          </div>
+          <div
+            class="flex flex-1 items-center sm:items-stretch sm:justify-start"
+          >
+            <div class="flex flex-shrink-0 items-center">
+              <img
+                class="block h-8 w-auto"
+                src="https://emoji-img.s3.ap-northeast-1.amazonaws.com/svg/1f408.svg"
+                alt="Your Cat"
+              />
+            </div>
+            <div class="sm:ml-6 sm:block">
+              <div class="flex space-x-4">
+                <!-- Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" -->
+                <a
+                  href="#"
+                  class="bg-slate-300 text-black rounded-md px-3 py-2 text-sm font-medium"
+                  aria-current="page"
+                  >Dashboard</a
+                >
+
+                <a
+                  href="#"
+                  class="text-black hover:bg-slate-100 rounded-md px-3 py-2 text-sm font-medium"
+                  >Team</a
+                >
+
+                <a
+                  href="#"
+                  class="text-black hover:bg-slate-100 rounded-md px-3 py-2 text-sm font-medium"
+                  >Projects</a
+                >
+
+                <a
+                  href="#"
+                  class="text-black hover:bg-slate-100 rounded-md px-3 py-2 text-sm font-medium"
+                  >Calendar</a
+                >
+              </div>
+            </div>
+          </div>
+          <div
+            class="absolute inset-y-0 right-0 flex items-center pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0"
+          >
+            <!-- Profile dropdown -->
+            <div class="relative ml-3">
+              <a href="/src/index.html" class="flex">
+                <span class="material-symbols-outlined"> manage_accounts </span>
+                <span class="items-center">へのへの もへじ</span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </nav>
+    <div class="flex flex-col">
+      <div class="flex flex-1 overflow-hidden">
+        <!--   start::Sidebar    -->
+        <aside class="bg-gray-200 w-56 h-screen">
+          <div
+            class="mt-2 w-56 origin-top-right divide-y divide-gray-100"
+            role="menu"
+            aria-orientation="vertical"
+            aria-labelledby="menu-button"
+          >
+            <div class="py-1" role="none">
+              <!-- Active: "bg-gray-100 text-gray-900", Not Active: "text-gray-700" -->
+              <a
+                href="#"
+                class="text-gray-700 block px-4 py-2 text-sm hover:bg-slate-100"
+                role="menuitem"
+                id="menu-item-0"
+                >Edit</a
+              >
+              <a
+                href="#"
+                class="text-gray-700 block px-4 py-2 text-sm hover:bg-slate-100"
+                role="menuitem"
+                id="menu-item-1"
+                >Duplicate</a
+              >
+            </div>
+            <div class="py-1" role="none">
+              <a
+                href="#"
+                class="text-gray-700 block px-4 py-2 text-sm hover:bg-slate-100"
+                role="menuitem"
+                id="menu-item-2"
+                >Archive</a
+              >
+              <a
+                href="#"
+                class="text-gray-700 block px-4 py-2 text-sm hover:bg-slate-100"
+                role="menuitem"
+                id="menu-item-3"
+                >Move</a
+              >
+            </div>
+            <div class="py-1" role="none">
+              <a
+                href="#"
+                class="text-gray-700 block px-4 py-2 text-sm hover:bg-slate-100"
+                role="menuitem"
+                id="menu-item-4"
+                >Share</a
+              >
+              <a
+                href="#"
+                class="text-gray-700 block px-4 py-2 text-sm hover:bg-slate-100"
+                role="menuitem"
+                id="menu-item-5"
+                >Add to favorites</a
+              >
+            </div>
+            <div class="py-1" role="none">
+              <a
+                href="#"
+                class="text-gray-700 block px-4 py-2 text-sm hover:bg-slate-100"
+                role="menuitem"
+                id="menu-item-6"
+                >Delete</a
+              >
+            </div>
+          </div>
+        </aside>
+        <!--   end::Sidebar    -->
+        <!--   start::Main Content     -->
+        <main
+          class="overflow-y-auto paragraph p-4 divide-y divide-gray-400 w-full"
+        >
+          <h1 class="text-2xl m-2">メニュー</h1>
+          <div class="flex flex-1 p-4 flex-wrap">
+            <a
+              href="exam_result.html"
+              class="block max-w-sm m-6 p-6 bg-white border border-gray-200 rounded-lg shadow hover:bg-gray-100 dark:bg-gray-800 dark:border-gray-700 dark:hover:bg-gray-700 text-center"
+            >
+              <span
+                class="material-symbols-outlined md-18 text-white"
+                style="font-size: 100px"
+              >
+                rate_review
+              </span>
+              <h5
+                class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white"
+              >
+                試験結果
+              </h5>
+              <p class="font-normal text-gray-700 dark:text-gray-400">
+                試験結果を確認できます。
+              </p>
+            </a>
+            <a
+              href="#"
+              class="block max-w-sm m-6 p-6 bg-white border border-gray-200 rounded-lg shadow hover:bg-gray-100 dark:bg-gray-800 dark:border-gray-700 dark:hover:bg-gray-700 text-center"
+            >
+              <span
+                class="material-symbols-outlined md-18 text-white"
+                style="font-size: 100px"
+              >
+                manage_accounts
+              </span>
+              <h5
+                class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white"
+              >
+                アカウント設定
+              </h5>
+              <p class="font-normal text-gray-700 dark:text-gray-400">
+                アカウントの設定を行います。
+              </p>
+            </a>
+          </div>
+        </main>
+        <!--   end::Main Content     -->
+      </div>
+      <div class="flex justify-center">著作権表示うんたらかんたら</div>
+    </div>
+  </body>
+</html>

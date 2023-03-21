@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="/dist/output.css" rel="stylesheet" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined"
+    />
+  </head>
+  <body>
+    <script type="text/javascript">
+      window.addEventListener("load", () => {
+        const sidebar = document.getElementById("sidebar");
+        sidebar.style.display = "none";
+        let isOpendSidebar = false;
+        document
+          .getElementById("open-sidebar")
+          .addEventListener("click", (event) => {
+            isOpendSidebar = !isOpendSidebar;
+            sidebar.style.display = isOpendSidebar ? "block" : "none";
+          });
+      });
+    </script>
+    <nav class="bg-white">
+      <div class="px-2 sm:px-6 lg:px-8">
+        <div class="relative flex h-16 items-center justify-between">
+          <div class="flex flex-1 items-center justify-between">
+            <a id="open-sidebar" href="#">
+              <span
+                class="material-symbols-outlined p-1 border-solid border-2 border-stale-500 rounded"
+              >
+                menu
+              </span>
+            </a>
+            <div class="flex flex-shrink-0 items-center">
+              <a href="/src/sp/layout.html">
+                <img
+                  class="block h-8 w-auto justify-center"
+                  src="https://emoji-img.s3.ap-northeast-1.amazonaws.com/svg/1f408.svg"
+                  alt="Your Cat"
+                />
+              </a>
+            </div>
+            <div class="relative ml-3">
+              <a href="/src/sp/index.html" class="flex">
+                <span
+                  class="material-symbols-outlined p-1 border-solid border-2 border-stale-500 rounded"
+                >
+                  manage_accounts
+                </span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </nav>
+    <div class="flex flex-col">
+      <!--   start::Sidebar    -->
+      <aside class="bg-gray-200" id="sidebar">
+        <div
+          class="mt-2 w-full origin-top-right divide-y divide-gray-100"
+          role="menu"
+          aria-orientation="vertical"
+          aria-labelledby="menu-button"
+        >
+          <div class="py-1" role="none">
+            <!-- Active: "bg-gray-100 text-gray-900", Not Active: "text-gray-700" -->
+            <a
+              href="#"
+              class="text-gray-700 block px-4 py-2 text-sm hover:bg-slate-100"
+              role="menuitem"
+              id="menu-item-0"
+              >Edit</a
+            >
+            <a
+              href="#"
+              class="text-gray-700 block px-4 py-2 text-sm hover:bg-slate-100"
+              role="menuitem"
+              id="menu-item-1"
+              >Duplicate</a
+            >
+          </div>
+          <div class="py-1" role="none">
+            <a
+              href="#"
+              class="text-gray-700 block px-4 py-2 text-sm hover:bg-slate-100"
+              role="menuitem"
+              id="menu-item-2"
+              >Archive</a
+            >
+            <a
+              href="#"
+              class="text-gray-700 block px-4 py-2 text-sm hover:bg-slate-100"
+              role="menuitem"
+              id="menu-item-3"
+              >Move</a
+            >
+          </div>
+          <div class="py-1" role="none">
+            <a
+              href="#"
+              class="text-gray-700 block px-4 py-2 text-sm hover:bg-slate-100"
+              role="menuitem"
+              id="menu-item-4"
+              >Share</a
+            >
+            <a
+              href="#"
+              class="text-gray-700 block px-4 py-2 text-sm hover:bg-slate-100"
+              role="menuitem"
+              id="menu-item-5"
+              >Add to favorites</a
+            >
+          </div>
+          <div class="py-1" role="none">
+            <a
+              href="#"
+              class="text-gray-700 block px-4 py-2 text-sm hover:bg-slate-100"
+              role="menuitem"
+              id="menu-item-6"
+              >Delete</a
+            >
+          </div>
+        </div>
+      </aside>
+      <!--   end::Sidebar    -->
+      <!--   start::Main Content     -->
+      <main
+        class="overflow-y-auto paragraph p-4 divide-y divide-gray-400 w-full"
+      >
+        <h1 class="text-2xl m-2">メニュー</h1>
+        <div class="flex flex-1 p-4 flex-wrap">
+          <a
+            href="exam_result.html"
+            class="block mb-5 p-4 w-full bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700 flex"
+          >
+            <span
+              class="material-symbols-outlined md-18 text-white"
+              style="font-size: 50px"
+            >
+              rate_review
+            </span>
+            <div class="ml-3">
+              <h5
+                class="text-2xl font-bold tracking-tight text-gray-900 dark:text-white"
+              >
+                試験結果
+              </h5>
+              <p class="font-normal text-gray-700 dark:text-gray-400">
+                試験結果を確認できます。
+              </p>
+            </div>
+          </a>
+          <a
+            href="#"
+            class="block mb-5 p-4 w-full bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700 flex"
+          >
+            <span
+              class="material-symbols-outlined md-18 text-white"
+              style="font-size: 50px"
+            >
+              manage_accounts
+            </span>
+            <div class="ml-3">
+              <h5
+                class="text-2xl font-bold tracking-tight text-gray-900 dark:text-white"
+              >
+                アカウント設定
+              </h5>
+              <p class="font-normal text-gray-700 dark:text-gray-400">
+                アカウントの設定を行います。
+              </p>
+            </div>
+          </a>
+        </div>
+      </main>
+      <!--   end::Main Content     -->
+      <div class="flex justify-center">著作権表示うんたらかんたら</div>
+    </div>
+  </body>
+</html>
